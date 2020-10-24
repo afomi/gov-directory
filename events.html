@@ -1,0 +1,19 @@
+---
+  layout: default
+  title: "Events"
+  jurisdiction: "San Jose, CA"
+---
+
+<ul>
+{% assign events = site.data.ca.san-jose.events | sort: 'event_body_name'  %}
+
+{% for event in events %}
+  <li>
+    <a href="#">{{ event.event_body_name }}</a>
+    -
+    {{ event.event_date }} -
+    {{ event.event_time }} -
+    {{ event.event_location }}
+  </li>
+{% endfor %}
+</ul>

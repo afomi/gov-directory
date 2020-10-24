@@ -1,0 +1,17 @@
+---
+  layout: default
+  title: "Bodies"
+  jurisdiction: "Bodies"
+---
+
+Jurisdiction
+
+<ul>
+{% for body in site.data.ca.san-jose.bodies %}
+  <li>
+    <a href="https://github.com/{{ body.body_id }}">
+      {{ body.body_name }}
+    </a>
+  </li>
+{% endfor %}
+</ul>

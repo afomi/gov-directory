@@ -1,0 +1,16 @@
+---
+  layout: default
+  title: "Governing Bodies"
+  jurisdiction: "San Jose, CA"
+---
+<ul>
+{% assign bodies = site.data.ca.san-jose.bodies | sort: 'body_name'  %}
+
+{% for body in bodies %}
+  <li>
+    <a href="https://github.com/{{ body.body_id }}">
+      {{ body.body_name }}
+    </a>
+  </li>
+{% endfor %}
+</ul>
