@@ -9,7 +9,7 @@
 
 {% for event in events %}
   <li>
-    <a href="#">{{ event.event_body_name }}</a>
+    <a href="#{{ event.event_id }}">{{ event.event_body_name }}</a>
     -
     {{ event.event_date }} -
     {{ event.event_time }} -
