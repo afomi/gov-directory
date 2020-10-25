@@ -3,12 +3,12 @@
   title: "Governing Bodies"
   jurisdiction: "San Jose, CA"
 ---
+{% assign bodies = site.data.ca.san-jose.bodies.index | sort: 'body_name' %}
 <ul>
-{% assign bodies = site.data.ca.san-jose.bodies | sort: 'body_name'  %}
 
 {% for body in bodies %}
   <li>
-    <a href="https://github.com/{{ body.body_id }}">
+    <a href="./ca/san-jose/bodies/{{ body.body_id }}">
       {{ body.body_name }}
     </a>
   </li>
